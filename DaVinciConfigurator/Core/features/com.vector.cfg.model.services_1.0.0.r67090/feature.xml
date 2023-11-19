@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.vector.cfg.model.services"
+      label="DaVinci Configurator Core Model Services Feature"
+      version="1.0.0.r67090"
+      provider-name="Vector Informatik GmbH"
+      plugin="com.vector.cfg.core">
+
+   <description>
+      Model Services
+   </description>
+
+   <copyright>
+      (c) Copyright Vector Informatik GmbH. All Rights Reserved.
+   </copyright>
+
+   <license>
+      proprietary
+   </license>
+
+   <includes
+         id="com.vector.cfg.model.mdf.feature"
+         version="1.10.0.201612121353"/>
+
+   <includes
+         id="com.vector.cfg.util.external.feature"
+         version="1.10.0"/>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.apache.logging.log4j.core" version="2.3.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.logging.log4j.api" version="2.3.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="com.vector.cfg.model.swcTemplates"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.model.services"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.model.abstraction"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.model.sysdesc"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.model.sysdesc.validation"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.persistency.groovy"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.model.formula"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+</feature>

@@ -1,0 +1,9 @@
+/*
+ * The Policy file for all core internal trusted classes. 
+ *
+ * Details for the used Policy, see class com.vector.cfg.util.security.VectorPolicy 
+ */
+grant {
+  permission java.security.AllPermission;
+  
+};

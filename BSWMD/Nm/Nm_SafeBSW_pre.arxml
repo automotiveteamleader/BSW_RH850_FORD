@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+***********************************************************************************************************************
+COPYRIGHT
+===============================================================================
+Copyright (c) 2017 by Vector Informatik GmbH.                                         All rights reserved.
+
+    This software is copyright protected and proprietary to Vector Informatik GmbH.
+    Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+    All other rights remain with Vector Informatik GmbH.
+===============================================================================
+FILE DESCRIPTION
+===============================================================================
+File:           Nm_SafeBSW_pre.arxml
+Component:      
+Module:         Nm_Rec
+Generator:      
+Description:    -
+*********************************************************************************************************************** 
+-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="31e56d84-e3e2-4344-ae83-fde3907ee0a5">
+			<SHORT-NAME>MICROSAR</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-CONFIGURATION-VALUES UUID="DCE:7b32bc44-023a-4d34-bcbf-bfa64a6fb21a">
+					<SHORT-NAME>Nm_Rec</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/Nm</DEFINITION-REF>
+					<CONTAINERS>
+						<ECUC-CONTAINER-VALUE UUID="edf47805-9197-4a53-86be-daeaa6267d44">
+							<SHORT-NAME>NmGlobalConfig</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Nm/NmGlobalConfig</DEFINITION-REF>
+							<SUB-CONTAINERS>
+								<ECUC-CONTAINER-VALUE UUID="5e4c6a20-b702-47e2-824d-a68f3cafcc85">
+									<SHORT-NAME>NmGlobalProperties</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Nm/NmGlobalConfig/NmGlobalProperties</DEFINITION-REF>
+									<PARAMETER-VALUES>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Nm/NmGlobalConfig/NmGlobalProperties/NmSafeBswChecks</DEFINITION-REF>
+											<VALUE>1</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+									</PARAMETER-VALUES>
+								</ECUC-CONTAINER-VALUE>
+							</SUB-CONTAINERS>
+						</ECUC-CONTAINER-VALUE>
+					</CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,11 @@
+/*
+ * The Policy file for Test (JUnit) classes during with active SecurityManager.
+ *
+ * Details for the used Policy, see class com.vector.cfg.util.security.VectorPolicy
+ * Note: In order to have effect on new classes you have to change the class above.
+ */
+grant {
+	// Grant Reflection access for org.mockito.internal.creation.cglib.CGLIBHacker
+	permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
+  
+};

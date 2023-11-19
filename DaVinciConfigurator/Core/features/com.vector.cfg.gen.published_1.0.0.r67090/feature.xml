@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.vector.cfg.gen.published"
+      label="DaVinci Configurator Generation Published API Feature"
+      version="1.0.0.r67090"
+      provider-name="Vector Informatik GmbH">
+
+   <description>
+      Published Generation API for generators
+   </description>
+
+   <copyright>
+      (c) Copyright Vector Informatik GmbH. All Rights Reserved.
+   </copyright>
+
+   <license>
+      proprietary
+   </license>
+
+   <includes
+         id="com.vector.cfg.core"
+         version="1.0.0.r67090"/>
+
+   <requires>
+      <import feature="org.eclipse.emf.common" version="2.7.0" match="compatible"/>
+      <import feature="org.eclipse.emf.ecore" version="2.7.0" match="compatible"/>
+   </requires>
+
+   <plugin
+         id="com.vector.cfg.gen.core.moduleInterface"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.gen.core.utils"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.gen.core.gencommon"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+</feature>

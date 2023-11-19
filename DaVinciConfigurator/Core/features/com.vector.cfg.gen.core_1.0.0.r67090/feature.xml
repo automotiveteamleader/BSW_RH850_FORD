@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.vector.cfg.gen.core"
+      label="DaVinci Configurator Generator Core Feature"
+      version="1.0.0.r67090"
+      provider-name="Vector Informatik GmbH">
+
+   <description>
+      Generation Core to load and execute generators
+   </description>
+
+   <copyright>
+      (c) Copyright Vector Informatik GmbH. All Rights Reserved.
+   </copyright>
+
+   <license>
+      proprietary
+   </license>
+
+   <includes
+         id="com.vector.cfg.core"
+         version="1.0.0.r67090"/>
+
+   <includes
+         id="com.vector.cfg.util.scripting.groovy.feature"
+         version="1.0.0.r67090"/>
+
+   <includes
+         id="com.vector.cfg.gen.published"
+         version="1.0.0.r67090"/>
+
+   <requires>
+      <import feature="org.eclipse.emf.common" version="2.7.0" match="compatible"/>
+      <import feature="org.eclipse.emf.ecore" version="2.7.0" match="compatible"/>
+   </requires>
+
+   <plugin
+         id="com.vector.cfg.gen.core.bswmdmigration"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.gen.core.bswmdmodel.groovy"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.gen.core.contributions"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.gen.core.contributions.dom.base"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.gen.core.genclassloading"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.gen.core.gencore"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.gen.core.genusage"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.gen.core.genusage.groovy"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.gen.vtt.published"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.util.classloading"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+</feature>

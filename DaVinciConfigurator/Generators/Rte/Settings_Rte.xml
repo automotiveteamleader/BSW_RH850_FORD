@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Settings>
+  <Settings Name="com.vector.cfg.gen.Rte.settings.RteSettings">
+    <Setting Name="DVRteGenPath" Value="$(SipRootPath)\$(PCKG-12CBB8F8-ECDB-443F-8E86-5EBA613F4C6C:DVCfgRteGen.exe:dir)\$(PCKG-12CBB8F8-ECDB-443F-8E86-5EBA613F4C6C:DVCfgRteGen.exe:name)"/>
+  </Settings>
+</Settings>
+

@@ -1,0 +1,1330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
+	<AR-PACKAGES>
+		<AR-PACKAGE UUID="04fac047-d54c-4b13-b2b2-48f2e13cd509">
+			<SHORT-NAME>AUTOSAR</SHORT-NAME>
+			<AR-PACKAGES>
+				<AR-PACKAGE UUID="852cb53e-de1a-4483-8dd4-38d8f9f5db16">
+					<SHORT-NAME>EcucDefs</SHORT-NAME>
+					<ELEMENTS>
+						<ECUC-MODULE-DEF UUID="155c8ee7-da57-42f4-9d8a-fba323362858">
+							<SHORT-NAME>Crypto</SHORT-NAME>
+							<DESC>
+								<L-2 L="EN">Configuration of the Crypto (CryptoDriver) module</L-2>
+							</DESC>
+							<CATEGORY>STANDARDIZED_MODULE_DEFINITION</CATEGORY>
+							<ADMIN-DATA>
+								<DOC-REVISIONS>
+									<DOC-REVISION>
+										<REVISION-LABEL>4.3.0</REVISION-LABEL>
+										<ISSUED-BY>AUTOSAR</ISSUED-BY>
+									</DOC-REVISION>
+								</DOC-REVISIONS>
+							</ADMIN-DATA>
+							<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00001</RELATED-TRACE-ITEM-REF>
+							<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+							<POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+							<SUPPORTED-CONFIG-VARIANTS>
+								<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+							</SUPPORTED-CONFIG-VARIANTS>
+							<CONTAINERS>
+								<!-- Container Definition: CryptoDriverObjects -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="ced17d01-6ba6-4cb5-b5a0-f48a01351ff7">
+									<SHORT-NAME>CryptoDriverObjects</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container for CRYPTO Objects</L-2>
+									</DESC>
+									<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00003</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: CryptoDriverObject -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="39c2b7db-669e-4f26-b039-e1e64a85c7de">
+											<SHORT-NAME>CryptoDriverObject</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Configuration of a CryptoDriverObject</L-2>
+											</DESC>
+											<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00008</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: CryptoDriverObjectId -->
+												<ECUC-INTEGER-PARAM-DEF UUID="540ddc2e-aee1-4d27-b9fc-2e13fcee17c4">
+													<SHORT-NAME>CryptoDriverObjectId</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Identifier of the Crypto Driver Object. The Crypto Driver Object offers different crypto primitives.</L-2>
+													</DESC>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00009</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: CryptoQueueSize -->
+												<ECUC-INTEGER-PARAM-DEF UUID="e276e3f7-735f-4aef-9a65-40888d344f8e">
+													<SHORT-NAME>CryptoQueueSize</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Size of the queue in the Crypto Driver. Defines the maximum number of jobs in the Crypto Driver Object queue. If it is set to 0, queueing is disabled in the Crypto Driver Object.</L-2>
+													</DESC>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00019</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>0</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Reference Definition: CryptoPrimitiveRef -->
+												<ECUC-REFERENCE-DEF UUID="521bc274-2a06-4f41-8a06-c9ee89cd99b8">
+													<SHORT-NAME>CryptoPrimitiveRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Refers to primitive in the CRYPTO.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">The CryptoPrimitive is a pre-configured container of the crypto service that shall be used.</L-1>
+														</P>
+													</INTRODUCTION>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00018</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Crypto/CryptoPrimitives/CryptoPrimitive</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: CryptoGeneral -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="a54d7d5a-19a7-4b11-b18d-cfa05a60f303">
+									<SHORT-NAME>CryptoGeneral</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container for common configuration options</L-2>
+									</DESC>
+									<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00002</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<PARAMETERS>
+										<!-- PARAMETER DEFINITION: CryptoDevErrorDetect -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="f10c15e1-6c83-424c-85d8-4ddb370a754c">
+											<SHORT-NAME>CryptoDevErrorDetect</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Switches the development error detection and notification on or off.</L-2>
+											</DESC>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">true: detection and notification is enabled.
+                                        false: detection and notification is disabled</L-1>
+												</P>
+											</INTRODUCTION>
+											<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00006</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: CryptoMainFunctionPeriod -->
+										<ECUC-FLOAT-PARAM-DEF UUID="97679a6c-d61c-482e-a40d-11308e5fb033">
+											<SHORT-NAME>CryptoMainFunctionPeriod</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Specifies the period of main function Crypto_MainFunction in seconds.</L-2>
+											</DESC>
+											<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00038</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MAX INTERVAL-TYPE="OPEN">1.7976931348623157E+308</MAX>
+											<MIN INTERVAL-TYPE="OPEN">0</MIN>
+										</ECUC-FLOAT-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: CryptoVersionInfoApi -->
+										<ECUC-BOOLEAN-PARAM-DEF UUID="1904bc9a-f1a0-4444-8039-3cb6aa19e6bc">
+											<SHORT-NAME>CryptoVersionInfoApi</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Pre-processor switch to enable and disable availability of the API Crypto_GetVersionInfo().</L-2>
+											</DESC>
+											<INTRODUCTION>
+												<P>
+													<L-1 L="EN">True: API Crypto_GetVersionInfo() is available
+                                        False: API Cryptosm_GetVersionInfo() is not available.</L-1>
+												</P>
+											</INTRODUCTION>
+											<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00007</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<SCOPE>LOCAL</SCOPE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											</VALUE-CONFIG-CLASSES>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										</ECUC-BOOLEAN-PARAM-DEF>
+									</PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: CryptoKeyElements -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="e2b82daf-01df-4fe9-9d1d-a9297a94adf9">
+									<SHORT-NAME>CryptoKeyElements</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container for Crypto key elements</L-2>
+									</DESC>
+									<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00005</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: CryptoKeyElement -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="d4a40bae-cb6a-41ec-ae95-79e5f02cafab">
+											<SHORT-NAME>CryptoKeyElement</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Configuration of a CryptoKeyElement</L-2>
+											</DESC>
+											<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00014</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: CryptoKeyElementAllowPartialAccess -->
+												<ECUC-BOOLEAN-PARAM-DEF UUID="b0f45f73-1010-4d58-ab8d-55512ecf59e9">
+													<SHORT-NAME>CryptoKeyElementAllowPartialAccess</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Enable or disable writing and reading the key element with data smaller than the size of the element.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">True: enable partial access of the key element
+                                                False: disable partial access of the key element</L-1>
+														</P>
+													</INTRODUCTION>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00025</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: CryptoKeyElementId -->
+												<ECUC-INTEGER-PARAM-DEF UUID="f9794102-3d97-4afa-aaa1-dc081368ac78">
+													<SHORT-NAME>CryptoKeyElementId</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Identifier of the CRYPTO key element</L-2>
+													</DESC>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00021</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: CryptoKeyElementInitValue -->
+												<ECUC-STRING-PARAM-DEF UUID="7e1b4a6e-b685-4099-9f2a-ae6bb8284358">
+													<SHORT-NAME>CryptoKeyElementInitValue</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Value which will be used to fill the element during initialisation, when the element is not already initialized.</L-2>
+													</DESC>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00023</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-STRING-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: CryptoKeyElementPersist -->
+												<ECUC-BOOLEAN-PARAM-DEF UUID="8fe31507-da13-4e49-ad68-b14af818a779">
+													<SHORT-NAME>CryptoKeyElementPersist</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Enable or disable persisting of the key element in non-volatile storage.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">True: enable persisting of the key element.
+                                                False: disable persisting of the key element.</L-1>
+														</P>
+													</INTRODUCTION>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00026</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												</ECUC-BOOLEAN-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: CryptoKeyElementReadAccess -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="d5ae7f58-2a60-4d9e-8803-c2dc7207b21d">
+													<SHORT-NAME>CryptoKeyElementReadAccess</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Define the reading access rights of the key element.</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">CRYPTO_RA_DENIED = key element cannot be read from outside the Crypto Driver
+                                                CRYPTO_RA INTERNAL_COPY = key element can be copied to another key element in the same crypto driver.
+                                                CRYPTO_RA_ALLOWED = key element can be read as plaintext
+                                                CRYPTO_RA_ENCRYPTED = key element can be read encrypted. E.g. SHE Ram-Key export.</L-1>
+														</P>
+													</INTRODUCTION>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00024</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="7d154105-45ab-412a-8dc8-2c058190d194">
+															<SHORT-NAME>CRYPTO_RA_ALLOWED</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e4f2e889-8625-4f9c-9ab6-b94f4923ed6c">
+															<SHORT-NAME>CRYPTO_RA_DENIED</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="db3e6468-ba28-4e9c-b98c-b1628bc7b106">
+															<SHORT-NAME>CRYPTO_RA_ENCRYPTED</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="6003c4d8-253e-4a08-a7c5-66fe954531f7">
+															<SHORT-NAME>CRYPTO_RA_INTERNAL_COPY</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: CryptoKeyElementSize -->
+												<ECUC-INTEGER-PARAM-DEF UUID="0fd14ae8-d17d-466d-80b3-24b151b76ffd">
+													<SHORT-NAME>CryptoKeyElementSize</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Maximum Size size of a CRYPTO key element in bytes</L-2>
+													</DESC>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00022</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: CryptoKeyElementWriteAccess -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="88760070-c54a-4016-97ed-401c70f7a194">
+													<SHORT-NAME>CryptoKeyElementWriteAccess</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Define the writing access rights of the key element</L-2>
+													</DESC>
+													<INTRODUCTION>
+														<P>
+															<L-1 L="EN">CRYPTO_WA_DENIED = key element can not be written from outside the Crypto Driver
+                                                CRYPTO_WA INTERNAL_COPY = key element can be filled with another key element in the same crypto driver.
+                                                CRYPTO_WA_ALLOWED = key element can be rwritten as plaintext
+                                                CRYPTO_WA_ENCRYPTED = key element can be written encrypted. E.g. SHE load key.</L-1>
+														</P>
+													</INTRODUCTION>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00027</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="683499c6-db31-4e3f-a31e-36f476d69389">
+															<SHORT-NAME>CRYPTO_WA_ALLOWED</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f1f7ffe8-b700-4948-8abd-1f46de3b636a">
+															<SHORT-NAME>CRYPTO_WA_DENIED</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="1f904902-1618-4dc9-ad88-4adff1b7bd00">
+															<SHORT-NAME>CRYPTO_WA_ENCRYPTED</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="50935501-5d1d-4b31-ba3b-28ebc2334d3d">
+															<SHORT-NAME>CRYPTO_WA_INTERNAL_COPY</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Reference Definition: CryptoKeyElementVirtualTargetRef -->
+												<ECUC-REFERENCE-DEF UUID="59fc771c-b63b-425d-b093-609b1f3761f7">
+													<SHORT-NAME>CryptoKeyElementVirtualTargetRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Refers to a key element which will contain the actual data. If the Reference is configured, the key element will be a virtual key element.</L-2>
+													</DESC>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00028</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Crypto/CryptoKeyElements/CryptoKeyElement</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: CryptoKeyTypes -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="54a7bc19-4227-4740-960a-c83b56b825b2">
+									<SHORT-NAME>CryptoKeyTypes</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container for CRYPTO key types</L-2>
+									</DESC>
+									<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00017</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: CryptoKeyType -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="86b2ca52-2f1e-4952-8950-bf7057d685ae">
+											<SHORT-NAME>CryptoKeyType</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Configuration of a CryptoKeyType</L-2>
+											</DESC>
+											<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00030</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<REFERENCES>
+												<!-- Reference Definition: CryptoKeyElementRef -->
+												<ECUC-REFERENCE-DEF UUID="dd3b12d0-eaf4-45e7-9562-fe79d4953f1c">
+													<SHORT-NAME>CryptoKeyElementRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Refers to a pointer in the Crypto Key Element, which holds the data of the crypto key element.</L-2>
+													</DESC>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00031</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Crypto/CryptoKeyElements/CryptoKeyElement</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: CryptoKeys -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="6c7f7ce9-aa93-43fa-94c5-943bebfed49f">
+									<SHORT-NAME>CryptoKeys</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container for CRYPTO keys</L-2>
+									</DESC>
+									<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00004</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: CryptoKey -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="0d840e23-31dd-4763-b156-1294926a0e07">
+											<SHORT-NAME>CryptoKey</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Configuration of a CryptoKey</L-2>
+											</DESC>
+											<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00011</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: CryptoKeyDeriveIterations -->
+												<ECUC-INTEGER-PARAM-DEF UUID="338975a8-6bcb-4862-9078-0b0984d2c8d3">
+													<SHORT-NAME>CryptoKeyDeriveIterations</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Holds the number of iterations to be performed by the key derivation primitive</L-2>
+													</DESC>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00015</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: CryptoKeyId -->
+												<ECUC-INTEGER-PARAM-DEF UUID="87671c3f-4bea-4bd0-857f-6425d0aadb39">
+													<SHORT-NAME>CryptoKeyId</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Identifier of the CRYPTO Key</L-2>
+													</DESC>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00012</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													<MAX>4294967295</MAX>
+													<MIN>1</MIN>
+												</ECUC-INTEGER-PARAM-DEF>
+											</PARAMETERS>
+											<REFERENCES>
+												<!-- Reference Definition: CryptoKeyTypeRef -->
+												<ECUC-REFERENCE-DEF UUID="83946690-ddd4-4a4c-9306-7a06a1fcd744">
+													<SHORT-NAME>CryptoKeyTypeRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Refers to a pointer in the CRYPTOto a CryptoKeyType. The CryptoKeyType provides the information which key elements are contained in a CryptoKey.</L-2>
+													</DESC>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00020</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Crypto/CryptoKeyTypes/CryptoKeyType</DESTINATION-REF>
+												</ECUC-REFERENCE-DEF>
+											</REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: CryptoPrimitives -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF UUID="76fa4e8a-21e2-4fae-a1a3-11ea92b4e488">
+									<SHORT-NAME>CryptoPrimitives</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">Container for CRYPTO primitives</L-2>
+									</DESC>
+									<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00032</RELATED-TRACE-ITEM-REF>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									<MULTIPLICITY-CONFIG-CLASSES>
+										<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									</MULTIPLICITY-CONFIG-CLASSES>
+									<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									<REQUIRES-INDEX>false</REQUIRES-INDEX>
+									<SUB-CONTAINERS>
+										<!-- Container Definition: CryptoPrimitive -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF UUID="1ff541d6-0eec-48b7-a427-aa8ad68749c6">
+											<SHORT-NAME>CryptoPrimitive</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Configuration of a CryptoPrimitive</L-2>
+											</DESC>
+											<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00033</RELATED-TRACE-ITEM-REF>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											<MULTIPLICITY-CONFIG-CLASSES>
+												<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											</MULTIPLICITY-CONFIG-CLASSES>
+											<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+											<REQUIRES-INDEX>false</REQUIRES-INDEX>
+											<PARAMETERS>
+												<!-- PARAMETER DEFINITION: CryptoPrimitiveAlgorithmFamily -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="900f7e67-366a-45e5-97c5-5119a8c42119">
+													<SHORT-NAME>CryptoPrimitiveAlgorithmFamily</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Determines the algorithm family used for the crypto service</L-2>
+													</DESC>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00035</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="8fdb4b3f-bc75-40f8-bf8d-c7c6a35c2d6b">
+															<SHORT-NAME>CRYPTO_ALGOFAM_3DES</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f1c7c582-f7bf-4605-92b1-f8f7f43a7ff2">
+															<SHORT-NAME>CRYPTO_ALGOFAM_AES</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="4eac066e-9323-4f84-8b2c-cc840b07abac">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_1_256</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="25063772-9571-425e-98d7-3e013894e600">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_1_512</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="1988dcae-3509-43af-9c46-53d0aca04ed6">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_2s_256</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e0a94991-1481-4fb8-90b7-d614bed33303">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_2s_512</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="bade722f-d736-4c56-8ac9-dedeeeedbe1d">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BRAINPOOL</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f4c6ef6f-b790-4009-9934-a2194c948f05">
+															<SHORT-NAME>CRYPTO_ALGOFAM_CHACHA</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f80e9a8c-79e7-41ba-851a-2526a6aa5a6b">
+															<SHORT-NAME>CRYPTO_ALGOFAM_CUSTOM</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="495bcf38-81e9-4dd4-804d-d5760c19ecb9">
+															<SHORT-NAME>CRYPTO_ALGOFAM_ECCNIST</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c68c5280-09f0-4f6e-b6c5-a33fcccb504a">
+															<SHORT-NAME>CRYPTO_ALGOFAM_ECIES</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="75a64a2f-dffe-4820-b079-754eec49eb0c">
+															<SHORT-NAME>CRYPTO_ALGOFAM_ED25519</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b8072dcb-bfcd-4ac0-810c-61d4a8fff4df">
+															<SHORT-NAME>CRYPTO_ALGOFAM_NOT_SET</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="8d7d10e0-0289-4ddb-b14d-15e81d64fbb9">
+															<SHORT-NAME>CRYPTO_ALGOFAM_RIPEMD160</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="4f2333a8-b2ea-4ebe-bf7f-7ce7b6aba37b">
+															<SHORT-NAME>CRYPTO_ALGOFAM_RNG</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="dc3b9e67-c9c5-44eb-b7a2-42c632a26a3a">
+															<SHORT-NAME>CRYPTO_ALGOFAM_RSA</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="379b594d-7613-46d2-bf18-4125006185fc">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SECURECOUNTER</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="19675d22-1d0e-4486-ad06-7aec45c50e18">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA1</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="700554ce-349b-4674-a972-5faecb18c47a">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_224</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="ee61a9b7-45b6-4cce-a08c-139a8ac4cacc">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_256</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="3551f7c3-e7c6-4995-98c7-ece318ba12df">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_384</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="28034c3f-3751-4d16-8868-803c2f60d1d0">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_512</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f320d951-403e-4854-8370-0c7535324170">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_512_224</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="19635dc7-28e5-4910-861a-bb4a34e65655">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_512_256</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="8309e17f-4621-447c-b70f-7d841beefca0">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_224</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="6ee6af77-b1d5-452e-bc6d-69c3f74113d6">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_256</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="ee9ff78c-440c-4e4e-b890-f3c76d025f72">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_384</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="1204871f-d0ae-4bd4-9440-2f3c6eecbb01">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_512</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f891ee28-0650-4ee2-84be-db6f78b9ea41">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHAKE128</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="bfe99944-b5bf-4131-a8e6-9c46984d2f05">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHAKE256</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e618f99f-10fa-4020-95c9-52ccc1a59e35">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SIPHASH</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: CryptoPrimitiveAlgorithmMode -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="dcb61f59-8594-40c6-81e7-6ea440f0e1d7">
+													<SHORT-NAME>CryptoPrimitiveAlgorithmMode</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Determines the algorithm mode used for the crypto service</L-2>
+													</DESC>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00036</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f6a45e06-ef09-4b9f-836e-507f60ff92a3">
+															<SHORT-NAME>CRYPTO_ALGOMODE_12ROUNDS</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b9b25b5c-3668-461d-9b5e-ee48e24ff3f7">
+															<SHORT-NAME>CRYPTO_ALGOMODE_20ROUNDS</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="8a1397bb-94f2-4224-a03a-05f34a7db8ad">
+															<SHORT-NAME>CRYPTO_ALGOMODE_8ROUNDS</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="cd785307-28cc-481c-93f3-e31e69cc4905">
+															<SHORT-NAME>CRYPTO_ALGOMODE_CBC</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="4c1e9fe4-acb4-404c-891b-752c14f8fe0f">
+															<SHORT-NAME>CRYPTO_ALGOMODE_CFB</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="a4510e15-b8c1-46d6-b0fc-50ca0702f207">
+															<SHORT-NAME>CRYPTO_ALGOMODE_CMAC</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="3e699602-0ecf-423f-be3b-9b4a95f1837c">
+															<SHORT-NAME>CRYPTO_ALGOMODE_CTR</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="8754b45f-38a4-45c5-a3ef-5c47c9fb0758">
+															<SHORT-NAME>CRYPTO_ALGOMODE_CTRDRBG</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="a6c8d420-2769-475c-8fdc-a36852d2e026">
+															<SHORT-NAME>CRYPTO_ALGOMODE_CUSTOM</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="1916c394-b0b1-4693-b8d9-fcf4f0ec1d02">
+															<SHORT-NAME>CRYPTO_ALGOMODE_ECB</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="d623f7da-82c5-4efd-a343-fd164d74c70f">
+															<SHORT-NAME>CRYPTO_ALGOMODE_GCM</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="648f2524-7dbf-43fa-bf35-b765e40833f8">
+															<SHORT-NAME>CRYPTO_ALGOMODE_GMAC</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="1e2d86ba-39ff-41ae-94a0-7581a04e9a64">
+															<SHORT-NAME>CRYPTO_ALGOMODE_HMAC</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="13209bc8-c69a-4497-ac4b-f632e97b774b">
+															<SHORT-NAME>CRYPTO_ALGOMODE_NOT_SET</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="9dc7dcc7-8a57-4f97-9def-31b53e40f591">
+															<SHORT-NAME>CRYPTO_ALGOMODE_OFB</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b1f691de-ae52-4a68-ab5c-fbb4b61aeeac">
+															<SHORT-NAME>CRYPTO_ALGOMODE_RSAES_OAEP</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="70a051b6-e69e-4fad-9ac8-e1c2f854b677">
+															<SHORT-NAME>CRYPTO_ALGOMODE_RSAES_PKCS1_v1_5</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="17abb645-d406-43d5-a1e9-7a7f621c1932">
+															<SHORT-NAME>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="b0d1918c-9495-484b-bbaa-33eecf7ebc40">
+															<SHORT-NAME>CRYPTO_ALGOMODE_RSASSA_PSS</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="caaccf0d-4cc0-4b71-9ecd-2b6f11530ab3">
+															<SHORT-NAME>CRYPTO_ALGOMODE_XTS</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: CryptoPrimitiveAlgorithmSecondaryFamily -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="45b8155f-942c-414c-91e9-f5ea2a72a47a">
+													<SHORT-NAME>CryptoPrimitiveAlgorithmSecondaryFamily</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Determines the algorithm secondary family used for the crypto service</L-2>
+													</DESC>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00037</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="90390f2c-39d5-4b3a-ab25-8339ae417a6b">
+															<SHORT-NAME>CRYPTO_ALGOFAM_3DES</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="f3dee801-737b-43ec-a3ed-e73be306ee2c">
+															<SHORT-NAME>CRYPTO_ALGOFAM_AES</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="9b4e81c0-0813-4651-8660-68d37e97628a">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_1_256</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="e18fa040-c2f2-4ac9-8e5d-1afc85df6e22">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_1_512</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="0f770d80-884c-48bb-b968-1e8a8074a442">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_2s_256</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="32dccdb1-a45f-4546-b622-b80240daaba9">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BLAKE_2s_512</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="98a430b3-6537-4118-a816-062f00a82077">
+															<SHORT-NAME>CRYPTO_ALGOFAM_BRAINPOOL</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="1019fa8e-a760-435b-ae5f-b6504f525328">
+															<SHORT-NAME>CRYPTO_ALGOFAM_CHACHA</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="603851a6-8d45-4925-8ab4-bd38a00dedca">
+															<SHORT-NAME>CRYPTO_ALGOFAM_CUSTOM</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="75b1aff4-40c1-4375-8352-ce2c1bfcff27">
+															<SHORT-NAME>CRYPTO_ALGOFAM_ECCNIST</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="635c39b3-213c-42af-9e30-93c52e0687a2">
+															<SHORT-NAME>CRYPTO_ALGOFAM_ECIES</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="16827729-b731-4724-871a-45d2f7c3ac85">
+															<SHORT-NAME>CRYPTO_ALGOFAM_ED25519</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="fed79310-e3a7-4044-9cd4-79610f0c7482">
+															<SHORT-NAME>CRYPTO_ALGOFAM_NOT_SET</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="4c469d0d-69d3-430f-be6e-fda131e95b69">
+															<SHORT-NAME>CRYPTO_ALGOFAM_RIPEMD160</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="20a3dd4d-e1a6-4172-b352-42323edfa19e">
+															<SHORT-NAME>CRYPTO_ALGOFAM_RNG</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="d5341f76-53f1-48f0-b342-e1971295ad9f">
+															<SHORT-NAME>CRYPTO_ALGOFAM_RSA</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="5b7e5585-eaa7-47a9-b91a-abac9e35c98e">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SECURECOUNTER</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="55a301ea-5ad0-44aa-953f-0e7630f36e63">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA1</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="7700aeb1-19f8-4110-bed3-87dce1e02dda">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_224</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="58807738-c96b-4bcc-808a-cb7e23a66378">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_256</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="4fe9132a-4634-4c75-bb12-35e73b2bfcfc">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_384</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="fc36d4c5-0d57-43f7-8180-6abdbbc2a6c0">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_512</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="3e4feabf-98ba-4ce6-8f4e-6de266d739b2">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_512_224</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="a961f96c-65d5-4f2d-a5a1-ce20941ff315">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA2_512_256</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="09c8382c-e1da-44e4-8a6b-391d35ad2806">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_224</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="97d47ca3-cad8-4fb5-8f2d-63753de2f053">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_256</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="9989ba54-6648-40e6-828c-61a837c23be4">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_384</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="d7cb8fd5-0ac3-45e4-8d7f-f1a24e124ba7">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHA3_512</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="7bd47487-3d1c-4d56-b3f1-ba3117cefdc9">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHAKE128</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="4b1971cd-f768-4a88-8a61-595153739313">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SHAKE256</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="c8f08a11-1c45-4e45-88d1-e480b4c0c525">
+															<SHORT-NAME>CRYPTO_ALGOFAM_SIPHASH</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+												<!-- PARAMETER DEFINITION: CryptoPrimitiveService -->
+												<ECUC-ENUMERATION-PARAM-DEF UUID="0aa3d4af-c064-47f8-8236-1a54c6c751e9">
+													<SHORT-NAME>CryptoPrimitiveService</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Determines the crypto service used for defining the capabilities</L-2>
+													</DESC>
+													<RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Crypto_00034</RELATED-TRACE-ITEM-REF>
+													<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<SCOPE>LOCAL</SCOPE>
+													<MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													</MULTIPLICITY-CONFIG-CLASSES>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													<POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													<REQUIRES-INDEX>false</REQUIRES-INDEX>
+													<VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													</VALUE-CONFIG-CLASSES>
+													<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													<LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="87a40b6a-0b78-4e91-8368-7d34d0d033b4">
+															<SHORT-NAME>AEAD_DECRYPT</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="148ddc4a-b978-4108-91f0-d381479a2d98">
+															<SHORT-NAME>AEAD_ENCRYPT</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="934a796c-3837-44df-aa93-326353f2a6a6">
+															<SHORT-NAME>DECRYPT</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="29e216cf-1321-4dd7-a500-fba45faefe5f">
+															<SHORT-NAME>ENCRYPT</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="ee76ae25-65e4-45c9-9198-72958feadb35">
+															<SHORT-NAME>HASH</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="78f7424a-1020-4c2b-ac1b-ac28514c51a5">
+															<SHORT-NAME>MAC_GENERATE</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="bcc3504c-63d1-4151-b42d-66140829617f">
+															<SHORT-NAME>MAC_VERIFY</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="5c939555-e4bf-40a3-96e2-1e7fbe391d3c">
+															<SHORT-NAME>RANDOM</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="bc83675d-ad4a-4d0e-bc97-ff1b4610b0ec">
+															<SHORT-NAME>SIGNATURE_GENERATE</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="1dce9c6d-3a2e-4164-a846-33099a01230a">
+															<SHORT-NAME>SIGNATURE_VERIFY</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="03d15cda-11f3-4540-b391-5301d24c9f2e">
+															<SHORT-NAME>SECCOUNTER_READ</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF UUID="3c0ad67b-a3cc-41e9-a545-f0e6870c0cbf">
+															<SHORT-NAME>SECCOUNTER_INCREMENT</SHORT-NAME>
+															<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													</LITERALS>
+												</ECUC-ENUMERATION-PARAM-DEF>
+											</PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									</SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							</CONTAINERS>
+						</ECUC-MODULE-DEF>
+					</ELEMENTS>
+				</AR-PACKAGE>
+			</AR-PACKAGES>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,63 @@
+Timestamp                          |  2018-07-20 7:47:35 AM
+==========================================================================================
+Starting...
+==========================================================================================
+  Tool version                     |  2.2.1
+  Command line args                |  -mode:Remove 
+  Execution path                   |  Y:\Delivery\CBD16x\CBD1601056\D05\external\ThirdParty\McalIntegrationHelper\3rdPartyMcalIntegrationHelper.exe
+  Calling path                     |  Y:\Delivery\CBD16x\CBD1601056\D05\external\ThirdParty\Mcal_Rh850P1xC\VectorIntegration
+  Config file                      |  Y:\Delivery\CBD16x\CBD1601056\D05\external\ThirdParty\Mcal_Rh850P1xC\VectorIntegration\MIPconfig.xml
+==========================================================================================
+Parsing config...
+==========================================================================================
+  Schema version                   |  2.0.6
+  SipBase absolute path            |  Y:\Delivery\CBD16x\CBD1601056\D05\external
+  McalSupply absolute path         |  Y:\Delivery\CBD16x\CBD1601056\D05\external\ThirdParty\Mcal_Rh850P1xC\Supply
+------------------------------------------------------------------------------------------
+Configured packages                
+------------------------------------------------------------------------------------------
+  Summary                          |  
+  Summary                          |  MCAL/Base package
+  NameExpected                     |  AUTOSAR_RH850_P1H-C_P1H-CE_MCAL_Ver4.02.00.D
+  NameDescription                  |  Mcal version 4.02.00.D for P1H-C and P1H-CE
+  Description                      |  MCAL package for RH850 P1H-C and P1H-CE including all needed files.
+  Mandatory                        |  True
+  Id                               |  1
+  UsesRegex                        |  True
+  ----------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------
+  Summary                          |  
+  Summary                          |  MCAL/Base package
+  NameExpected                     |  AUTOSAR_RH850_P1M-C_MCAL_Ver4.02.00.D
+  NameDescription                  |  Mcal version 4.02.00.D for P1M
+  Description                      |  MCAL package for RH850 P1M-C including Adc, Fls, Mcu, Spi, Wdg.
+  Mandatory                        |  True
+  Id                               |  1
+  UsesRegex                        |  True
+  ----------------------------------------------------------------------------------------
+  Summary                          |  MCAL/Base package
+  NameExpected                     |  AUTOSAR_RH850_P1M-C_MCAL_Ver4.02.01.D
+  NameDescription                  |  Mcal version 4.02.01.D for P1M - Dio, Port
+  Description                      |  MCAL package for RH850 P1M-C including Dio and Port.
+  Mandatory                        |  False
+  Id                               |  2
+  UsesRegex                        |  True
+  ----------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------
+==========================================================================================
+Packages found in SIP
+==========================================================================================
+  Name                             |  AUTOSAR_RH850_P1M-C_MCAL_Ver4.02.00.D
+  Path_Abs                         |  Y:\Delivery\CBD16x\CBD1601056\D05\external\ThirdParty\Mcal_Rh850P1xC\Supply\AUTOSAR_RH850_P1M-C_MCAL_Ver4.02.00.D
+  PackageIdentified                |  False
+  ----------------------------------------------------------------------------------------
+  Name                             |  AUTOSAR_RH850_P1M-C_MCAL_Ver4.02.01.D
+  Path_Abs                         |  Y:\Delivery\CBD16x\CBD1601056\D05\external\ThirdParty\Mcal_Rh850P1xC\Supply\AUTOSAR_RH850_P1M-C_MCAL_Ver4.02.01.D
+  PackageIdentified                |  False
+  ----------------------------------------------------------------------------------------
+  Name                             |  CodeGenerator2.06.03
+  Path_Abs                         |  Y:\Delivery\CBD16x\CBD1601056\D05\external\ThirdParty\Mcal_Rh850P1xC\Supply\CodeGenerator2.06.03
+  PackageIdentified                |  False
+  ----------------------------------------------------------------------------------------
+==========================================================================================
+Exit with code                     |  CANCEL

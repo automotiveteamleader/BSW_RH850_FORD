@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.vector.cfg.core.extensions"
+      label="DaVinci Configurator Core Extenstions Feature"
+      version="1.0.0.r67090"
+      provider-name="Vector Informatik GmbH">
+
+   <description>
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright>
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license>
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="com.vector.cfg.core"
+         version="1.0.0.r67090"/>
+
+   <includes
+         id="com.vector.cfg.gen.core"
+         version="1.0.0.r67090"/>
+
+   <includes
+         id="com.vector.cfg.model.services"
+         version="1.0.0.r67090"/>
+
+   <plugin
+         id="com.vector.cfg.consistency.basicrules"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.datamining"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.project.activity"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.installation"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.model.services.client"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.business.usecases"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.dom.mem"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.workflow.derival"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.workflow.tdscfg"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.business.defrefs"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+   <plugin
+         id="com.vector.cfg.core.sip"
+         download-size="0"
+         install-size="0"
+         version="1.0.0.r67090"
+         unpack="false"/>
+
+</feature>

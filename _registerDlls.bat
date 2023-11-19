@@ -1,0 +1,5 @@
+"%windir%/system32/regsvr32.exe" /s "%CommonProgramFiles%\Vector\DaVinci\DEVApplicationInterface.dll"
+"%windir%/system32/regsvr32.exe" /s "%CommonProgramFiles%\Vector\DaVinci\DVSharedComponentProxy.dll"
+"%windir%/system32/regsvr32.exe" /s "%CommonProgramFiles%\Vector\DaVinci\MultiOsMgr.dll"
+"%windir%/system32/regsvr32.exe" /s "%CommonProgramFiles%\Vector\DaVinci\DriverConfig.dll"
+"%windir%/system32/regsvr32.exe" /s "%CommonProgramFiles%\Vector\DaVinci\VCMS_VSS.dll"

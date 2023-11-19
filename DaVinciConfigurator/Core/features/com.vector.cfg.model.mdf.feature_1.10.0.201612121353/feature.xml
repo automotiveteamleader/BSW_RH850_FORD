@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.vector.cfg.model.mdf.feature"
+      label="MDF Model Feature"
+      version="1.10.0.201612121353"
+      provider-name="Vector Informatik GmbH">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <plugin
+         id="aquintos.authentication"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="aquintos.deltamodel"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="aquintos.log"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="aquintos.mdf"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"/>
+
+   <plugin
+         id="aquintos.mmregistry"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="aquintos.modelbridge"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="aquintos.operationsframework"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="aquintos.utilities"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="aquintos.uuid"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="aquintos.commonresources"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="org.hsqldb"
+         download-size="0"
+         install-size="0"
+         version="2.2.5.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="aquintos.auth.log"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="aquintos.commonresources.jdk14compliantparts"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="vi.info"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="vi.api"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="vi.auth.api"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="vi.collections"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+   <plugin
+         id="vi.concurrency.api"
+         download-size="0"
+         install-size="0"
+         version="8.0.0.201612121353"
+         unpack="false"/>
+
+</feature>

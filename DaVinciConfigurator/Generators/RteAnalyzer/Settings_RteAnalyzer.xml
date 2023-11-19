@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Settings>
+  <Settings Name="com.vector.cfg.gen.Rte.settings.RteSettings">
+    <Setting Name="MicrosarRteAnalyzerGenPath" Value="$(SipRootPath)\$(PCKG-E55225A7-25ED-4F70-B5AE-21AA2308AF9B:MicrosarRteAnalyzerCfgGen.exe:dir)\$(PCKG-E55225A7-25ED-4F70-B5AE-21AA2308AF9B:MicrosarRteAnalyzerCfgGen.exe:name)"/>
+  </Settings>
+</Settings>
+

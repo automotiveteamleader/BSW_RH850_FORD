@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MipConfig xmlns="http://www.vector.com/MIPv2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vector.com/MIPv2 MIP2.0.6.xsd">
+	<!--
+============================================================================
+
+Copyright (c) 2017 by Vector Informatik GmbH. All rights reserved.
+
+This software is copyright protected and proprietary to Vector Informatik GmbH.
+Vector Informatik GmbH grants to you only those rights as set out in the license conditions.
+All other rights remain with Vector Informatik GmbH.
+
+============================================================================
+
+This file is needed for internal use.
+Please do not modify this file, otherwise the software may behave in
+unexpected way.
+
+============================================================================
+
+============================================================================
+                P R O J E C T
+============================================================================
+Module
+=======================
+Rh850P1xCRen02Asr4Sub
+============================================================================
+                A U T H O R   I D E N T I T Y
+============================================================================
+Initials	Name						Company
+=====	===============	=======================================================
+virgaj		Andrej Gazvoda			Vector Informatik GmbH
+virrsu		Roland Suess	   		Vector Informatik GmbH
+=============================================================================
+                R E V I S I O N   H I S T O R Y
+=============================================================================
+Date				Version		Author		Description
+========= 	======	=======	=================================================
+2017-07-30	1.00.00		virgaj			SuperSet Integration P1x-C
+													AUTOSAR_RH850_P1H-C_P1H-CE_MCAL_Ver4.02.00.D
+													AUTOSAR_RH850_P1M-C_MCAL_Ver4.02.00.D / AUTOSAR_RH850_P1M-C_MCAL_Ver4.02.01.D
+2017-08-09				virrsu			Changes regarding AUTOSAR_RH850_P1M-C_MCAL_Ver4.02.01.D
+**************************************************************************************************************************
+  -->
+	<GeneralInformation>
+		<!-- Path to SIP base path relative to the location of this file 
+         ATTENTION: All other paths within this configuraton file are relative to the SIP Base path! -->
+		<SipBase_RelPath>..\\..\\..\\</SipBase_RelPath>
+		<!-- Path to the MCAL supply folder relative to the SIP Base path -->
+		<McalSupply_RelPath>ThirdParty\\Mcal_\w*\\Supply</McalSupply_RelPath>
+	</GeneralInformation>
+	<!--
+  =====================================================================================================
+  Package definitions
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  Attributes:
+    - Summary:      Freetext to describe the package content in short
+    - Id:           Unique number to identify the package
+  Elements:
+    - NameExpected: This is the folder name of the package as specified by MCAL supplier.
+                    Typically this folder name contains informations about version and supported 
+                    controllers or families
+    - Description:  Free text to describe the contents of this package in detail
+    - Mandatory:    'true' if this package is mandatory, 'false' otherwise
+  =====================================================================================================
+  -->
+	<Packages>	
+		<Package Summary="MCAL/Base package" Id="1">
+			<NameExpected>AUTOSAR_RH850_P1H-C_P1H-CE_MCAL_Ver4.02.00.D</NameExpected>
+			<NameDescription>Mcal version 4.02.00.D for P1H-C and P1H-CE</NameDescription>
+			<Description>MCAL package for RH850 P1H-C and P1H-CE including all needed files.</Description>
+			<Mandatory>true</Mandatory>
+		</Package>	
+	</Packages>		
+	<Packages>
+		<!-- Editing hint: Adapt these settings to the packages used -->
+		<Package Summary="MCAL/Base package" Id="1">
+			<NameExpected>AUTOSAR_RH850_P1M-C_MCAL_Ver4.02.00.D</NameExpected>
+			<NameDescription>Mcal version 4.02.00.D for P1M</NameDescription>			
+			<Description>MCAL package for RH850 P1M-C including Adc, Fls, Mcu, Spi, Wdg.</Description>
+			<Mandatory>true</Mandatory>
+		</Package>	
+		<!-- Editing hint: Adapt these settings to the packages used -->
+		<Package Summary="MCAL/Base package" Id="2">
+			<NameExpected>AUTOSAR_RH850_P1M-C_MCAL_Ver4.02.01.D</NameExpected>
+			<NameDescription>Mcal version 4.02.01.D for P1M - Dio, Port</NameDescription>			
+			<Description>MCAL package for RH850 P1M-C including Dio and Port.</Description>
+			<Mandatory>false</Mandatory>
+		</Package>
+	</Packages>
+	<!--
+  =====================================================================================================
+  Below all actions are described which are needed in order to install or remove the MCAL packages.
+  They are devided in the sections.
+  - Install:     With this step the MCAL is installed/copied into the SIP structure thus commonly only
+                 one action for each package is necessary namely copy the package.
+                 If package is already available in SIP (e.ghad been included in SIP) these steps will 
+                 be skipped.
+  - Prepare:     During this step some necessary operation within the MCAL packages and within the 
+                 Vector SIP are executed.
+  - UndoPrepare: With this actions the actions described within the Prepare section will be undone.
+  - Remove:      The actions described here will remove the MCAL packages!
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  For all 4 sections all available actions can be executed as often as needed.
+  Order of action in this file is equal to the order of execution.
+  =====================================================================================================
+  -->
+	<Install>
+		<!-- Editing hint: Adapt these settings to the number of used packages -->
+		<ActionCopyPackage Summary="Copy package" RelatedPackage="1"/>
+		<ActionCopyPackage Summary="Copy package" RelatedPackage="2"/>
+	</Install>
+	<Prepare>
+		<!-- Write path to MCAL package to *_rules.mak file -->
+		<!-- Editing hint: The relative path to the plugins may have to be adapted here. -->
+		<ActionPatchFile Summary="Set path to MCAL package in make file" RelatedPackage="1" ExecuteAlways="true">
+			<PathRel>BSW\\Mcal_.*\\mak\\Mcal_.*_rules.mak$</PathRel>
+		  <Pattern>\A\s*(MCAL_PATH\s*=)(.*)</Pattern>
+		  <!-- Patch *rules.mak - file with e.g. MCAL_PATH = ..\ThirdParty\Mcal_Rh850F1l\Supply\AUTOSAR_RH850_F1L_MCAL_Ver4.01.07.001 -->
+			<ReplaceBOP>$1 ..\\?CONST.Package_PathRel_Id1?</ReplaceBOP>
+		  <SkipPattern></SkipPattern>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Set path to optional MCAL package in make file" RelatedPackage="2" ExecuteAlways="true">
+			<PathRel>BSW\\Mcal_.*\\mak\\Mcal_.*_rules.mak$</PathRel>
+		  <Pattern>\A\s*(MCAL_PATH_ALT\s*=)(.*)</Pattern>
+		  <!-- Patch *rules.mak - file with e.g. MCAL_PATH = ..\ThirdParty\Mcal_Rh850F1l\Supply\AUTOSAR_RH850_F1L_MCAL_Ver4.01.07.001 -->
+			<ReplaceBOP>$1 ..\\?CONST.Package_PathRel_Id2?</ReplaceBOP>
+		  <SkipPattern></SkipPattern>
+		</ActionPatchFile>
+		<!-- Write path to MCAL package to gen_Rh850P1xC.bat file -->
+		<!-- Editing hint: The relative path to the plugins may have to be adapted here. -->
+		<ActionPatchFile Summary="Set path to MCAL package in gen_Rh850P1xC.bat" RelatedPackage="1" ExecuteAlways="true" >
+		  <PathRel>DaVinciConfigurator\\Generators\\Mcal_Rh850P1xC\\gen_Rh850P1xC.bat</PathRel>
+		  <Pattern>(SET ROOT_FOLDER\s*=)(.*)</Pattern>
+		  <!-- Patch *rules.mak - file with e.g. MCAL_PATH = ..\ThirdParty\Mcal_Rh850F1l\Supply\AUTOSAR_RH850_F1L_MCAL_Ver4.01.07.001 -->
+		  <ReplaceBOP>$1..\\..\\..\\?CONST.Package_PathRel_Id1?</ReplaceBOP>
+		  <SkipPattern></SkipPattern>
+		</ActionPatchFile>
+		<!-- Write path to MCAL package to gen_Rh850P1xC_alt.bat file -->
+		<!-- Editing hint: The relative path to the plugins may have to be adapted here. -->
+		<ActionPatchFile Summary="Set path to MCAL package in gen_Rh850P1xC_alt.bat" RelatedPackage="2" ExecuteAlways="true" >
+		  <PathRel>DaVinciConfigurator\\Generators\\Mcal_Rh850P1xC\\gen_Rh850P1xC_alt.bat</PathRel>
+		  <Pattern>(SET ROOT_FOLDER\s*=)(.*)</Pattern>
+		  <!-- Patch *rules.mak - file with e.g. MCAL_PATH = ..\ThirdParty\Mcal_Rh850F1l\Supply\AUTOSAR_RH850_F1L_MCAL_Ver4.01.07.001 -->
+		  <ReplaceBOP>$1..\\..\\..\\?CONST.Package_PathRel_Id2?</ReplaceBOP>
+		  <SkipPattern></SkipPattern>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Patch module Settings xml files - relevant for updates. Generation path to Mcal package" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\Settings_ExtGen_(Adc|Dio|Fls|Gpt|Icu|Mcu|Port|Pwm|Spi|Wdg).xml</PathRel>
+			<Pattern><![CDATA[([^\"]*[CommandLine|GenerationParameters|WorkingDir]=".*)(\$\(SipRootPath\)\\)([^\"]*)(\\X1X[^\"]*)]]></Pattern>
+			<ReplaceBOP>$1$2?CONST.Package_PathRel_Id1?$4</ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Patch module Settings xml files - relevant for updates. Generation path to Mcal package" RelatedPackage="2" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\Settings_ExtGen_(Dio|Port).xml</PathRel>
+			<Pattern><![CDATA[([^\"]*[CommandLine|GenerationParameters|WorkingDir]=".*)(\$\(SipRootPath\)\\)([^\"]*)(\\X1X[^\"]*)]]></Pattern>
+			<ReplaceBOP>$1$2?CONST.Package_PathRel_Id2?$4</ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>		
+		<ActionPatchFile Summary="Patch module Settings xml files - relevant for updates. Define Generation Parameters" RelatedPackage="1" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\Settings_ExtGen_(Adc|Dio|Fls|Gpt|Icu|Mcu|Port|Pwm|Spi|Wdg|CorTst|FlsTst|RamTst).xml</PathRel>
+			<Pattern><![CDATA[([^\"]*[GenerationParameters]=".*)(\$\(SipRootPath\)\\)([^\"]*)(\\X1X[^\"]*)(\$\(SipRootPath\)\\)([^\"]*)(\\X1X[^\"]*)]]></Pattern>
+			<ReplaceBOP>$1$2?CONST.Package_PathRel_Id1?$4$5?CONST.Package_PathRel_Id1?$7</ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>
+		<ActionPatchFile Summary="Patch module Settings xml files - relevant for updates. Define Generation Parameters" RelatedPackage="2" ExecuteAlways="true" MultiFile="true">
+			<PathRel>DaVinciConfigurator\\Generators\\Mcal_.*\\Settings_ExtGen_(Dio|Port).xml</PathRel>
+			<Pattern><![CDATA[([^\"]*[GenerationParameters]=".*)(\$\(SipRootPath\)\\)([^\"]*)(\\X1X[^\"]*)(\$\(SipRootPath\)\\)([^\"]*)(\\X1X[^\"]*)]]></Pattern>
+			<ReplaceBOP>$1$2?CONST.Package_PathRel_Id2?$4$5?CONST.Package_PathRel_Id2?$7</ReplaceBOP>
+			<SkipPattern/>
+		</ActionPatchFile>				
+		<!-- Rename MCAL header files to avoid redefinitions -->
+		<!-- Editing hint: File paths may need to be adapted. Add or remove files if necessary -->
+		<ActionRenameFile Summary="Rename vendor's Platform_Types.h to avoid redefinitions" RelatedPackage="1" ActionId="20" ExecuteAlways="true">
+			<PathRel>?CONST.Package_PathRel_Id1?\\X1X\\common_platform\\generic\\include\\Platform_Types.h</PathRel>
+			<NewName>_Platform_Types.h</NewName>
+		</ActionRenameFile>
+	</Prepare>
+	<!-- Define actions to be undone when executing UndPrepare -->
+	<!-- Editing hint: Adapt the undo settings to the action settings above -->
+	<UndoPrepare>
+		<Undo ActionId="20" Summary="Rename file to original name"/>
+	</UndoPrepare>
+	<!-- Define actions to be undone when executing Remove -->
+	<!-- Editing hint: Adapt the remove settings to the install settings above -->
+	<Remove>
+		<ActionRemove Summary="Remove 3rd party packages" RelatedPackage="-1" MultiFile="true">
+			<!-- action removes supply folder, but only if all installed packages are removed at once (RelatedPackage="-1") -->
+			<PathRel>?CONST.Supply_PathRel?</PathRel>
+		</ActionRemove>
+	</Remove>
+	<!--
+  =====================================================================================================
+  As the last step the BSWMD files have to be copied from the MCAL packages to a SIP internal location.
+  Therefore the supported derivatives must be determined and a derivative must be choosen by customer.
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  In order to specify the supported derivates there are two possibilties:
+  1. Specify them explicitly
+     <Derivatives>
+       <Derivative DisplayName="R7F701002" IdentifyingFileFragment="02" />
+       <Derivative DisplayName="R7F701003" IdentifyingFileFragment="03" />
+       ...
+     </Derivatives>
+     The Attribute DisplayName specifies the name of the derivative which shall be shown within the tool.
+     The Attribute IdentifyingFileFragment defines the fragment of the filename which signalizes the 
+     compatibility to the derivative.
+  
+  2. Using a pattern to look for supported derivatives within the MCAL packages
+     <Derivatives>
+       <Pattern><![CDATA[?CONST.Package_PathRel_Id1?\\TC2.*\\Aurix_.*\\tools\\tresosECU\\bmd\\(?<derivative>TC.*)]]></Pattern>
+       <DisplayNameBOP>Aurix ${derivative}</DisplayNameBOP>
+       <IdentifyingFileFragmentBOP>${derivative}</IdentifyingFileFragmentBOP>
+     </Derivatives>
+     
+     The <Pattern> element is used to scan for derivatives. 
+     The <DisplayNameBOP> defines the name of the derivative to be displayed.
+     The <IdentifyingFileFragmentBOP> defines the fragment of the filename which signalizes the 
+     compatibility to the derivative.
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  After defining the derivatives as a second step the copy actions for each MCAL package have to be 
+  defined.
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  The action ActionDefVar may be defined in advance in order to set variables which may be used within 
+  the copy actions.
+  =====================================================================================================
+  -->
+	<Bswmd>
+		<ActionDefVar Summary="Define temporary variable" RelatedPackage="1" ExecuteAlways="true">
+			<Name>BswmdMcalFolder</Name>
+			<LookForPathPattern>BSWMD\\(Mcal_\w*)</LookForPathPattern>
+			<ValueBOP>$1</ValueBOP>
+		</ActionDefVar>
+		<!-- Here a list of all available derivatives is provided for MCAL Integration helper, along
+         with the IdentifiyinfFileFragment, which marks a BSWMD as belonging to a derivative -->
+		<!-- Editing hint: Edit derivative list -->
+		<Derivatives>
+		<Derivative DisplayName="R7F701370A" IdentifyingFileFragment="70"/>
+			<Derivative DisplayName="R7F701371" IdentifyingFileFragment="71"/>
+			<Derivative DisplayName="R7F701372" IdentifyingFileFragment="72"/>
+			<Derivative DisplayName="R7F701373" IdentifyingFileFragment="73"/>
+			<Derivative DisplayName="R7F701374" IdentifyingFileFragment="74"/>
+		</Derivatives>
+		<Copy RelatedPackage="1" Renesas="true">
+			<!-- For Renesas MCALs that have BSWMD file names like R403_ADC_F1L_02_03_21_to_25_44_45.arxml, use a generic pattern that 
+		   matches all BSWMD files and set Renesas="true" above. 3rdPartyMcalIntegrationHelper will select the correct  files
+		   according to the derivative specified by IdentifyingFileFragment -->
+			<!-- Editing hint: Plugin path may need to be adapted -->
+			<Pattern><![CDATA[?CONST.Package_PathRel_Id1?\\X1X\\P1x-C\\modules\\.*\\definition\\P1M-C\\[A-Za-z0-9]*_([A-Za-z]*)_P1X-C_?USR.IdentifyingFileFragment?\w*\.\w*]]></Pattern>
+			<TargetBOP>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_$1_bswmd.arxml</TargetBOP>
+			<ExcludePattern></ExcludePattern>
+			<RemovePattern>Bswmd\\?VAR.BswmdMcalFolder?\\.*_bswmd.arxml</RemovePattern>
+		</Copy>			
+		<Copy RelatedPackage="2" Renesas="true">
+			<!-- For Renesas MCALs that have BSWMD file names like R403_ADC_F1L_02_03_21_to_25_44_45.arxml, use a generic pattern that 
+		   matches all BSWMD files and set Renesas="true" above. 3rdPartyMcalIntegrationHelper will select the correct  files
+		   according to the derivative specified by IdentifyingFileFragment -->
+			<!-- Editing hint: Plugin path may need to be adapted -->
+			<Pattern><![CDATA[?CONST.Package_PathRel_Id2?\\X1X\\P1x-C\\modules\\.*\\definition\\P1M-C\\[A-Za-z0-9]*_([A-Za-z]*)_P1X-C_?USR.IdentifyingFileFragment?\w*\.\w*]]></Pattern>
+			<TargetBOP>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_$1_bswmd.arxml</TargetBOP>
+			<ExcludePattern></ExcludePattern>
+			<RemovePattern>Bswmd\\?VAR.BswmdMcalFolder?\\.*_bswmd.arxml</RemovePattern>
+		</Copy>			
+		<Copy RelatedPackage="2" Renesas="true">
+			<!-- For Renesas MCALs that have BSWMD file names like R403_ADC_F1L_02_03_21_to_25_44_45.arxml, use a generic pattern that 
+		   matches all BSWMD files and set Renesas="true" above. 3rdPartyMcalIntegrationHelper will select the correct  files
+		   according to the derivative specified by IdentifyingFileFragment -->
+			<!-- Editing hint: Plugin path may need to be adapted -->
+			<Pattern><![CDATA[?CONST.Package_PathRel_Id2?\\X1X\\P1x-C\\modules\\.*\\definition\\4.0.3\\P1M-C\\[A-Za-z0-9]*_([A-Za-z]*)_P1X-C_?USR.IdentifyingFileFragment?\w*\.\w*]]></Pattern>
+			<TargetBOP>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_$1_bswmd.arxml</TargetBOP>
+			<ExcludePattern></ExcludePattern>
+			<RemovePattern>Bswmd\\?VAR.BswmdMcalFolder?\\.*_bswmd.arxml</RemovePattern>
+		</Copy>			
+ 		<Copy RelatedPackage="1" Renesas="false">
+			<!-- For Renesas MCALs that have BSWMD file names like R403_ADC_F1L_02_03_21_to_25_44_45.arxml, use a generic pattern that 
+		   matches all BSWMD files and set Renesas="true" above. 3rdPartyMcalIntegrationHelper will select the correct  files
+		   according to the derivative specified by IdentifyingFileFragment -->
+			<!-- All other BSWMD with IdentifyingFileFragment -->
+ 			<Pattern><![CDATA[?CONST.Package_PathRel_Id1?\\X1X\\P1x-C\\modules\\.*\\definition\\4.0.3\\common\\R403_WDG_DriverA_P1X-C.arxml]]></Pattern>
+			<TargetBOP>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_WDG_bswmd.arxml</TargetBOP>
+			<ExcludePattern>.*WDG_DriverB.*</ExcludePattern>
+			<RemovePattern>Bswmd\\?VAR.BswmdMcalFolder?\\WDG_bswmd.arxml</RemovePattern>
+		</Copy>
+		<Copy RelatedPackage="1" Renesas="false">
+			<!-- For Renesas MCALs that have BSWMD file names like R403_ADC_F1L_02_03_21_to_25_44_45.arxml, use a generic pattern that 
+		   matches all BSWMD files and set Renesas="true" above. 3rdPartyMcalIntegrationHelper will select the correct  files
+		   according to the derivative specified by IdentifyingFileFragment -->
+			<!-- Editing hint: Plugin path may need to be adapted -->
+		  <Pattern><![CDATA[?CONST.Package_PathRel_Id1?\\X1X\\P1x-C\\modules\\.*\\definition\\4.0.3\\common\\R403_([A-Za-z]*)_P1X-C.arxml]]></Pattern>
+		  <TargetBOP>Bswmd\\?VAR.BswmdMcalFolder?\\Copy_$1_bswmd.arxml</TargetBOP>
+		  <ExcludePattern>.*(WDG_DriverB).*</ExcludePattern>
+			<RemovePattern>Bswmd\\?VAR.BswmdMcalFolder?\\.*_bswmd.arxml</RemovePattern>
+		</Copy>		
+	</Bswmd>
+</MipConfig>
